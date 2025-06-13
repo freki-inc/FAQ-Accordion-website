@@ -56,6 +56,33 @@
 }
 
 @layer Layout {
+    :root {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100vw calc(250 / 16 * 1rem);
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        background-color: var(--layout-background);
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
     footer {
         font-size: 11px; 
         text-align: center;
