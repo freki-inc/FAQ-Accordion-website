@@ -1,31 +1,29 @@
 @layer fonts {
-    :root {
-        /* work-sans-regular - latin */
-        @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Work Sans';
-        font-style: normal;
-        font-weight: 400;
-        src: url('.assets/fonts/work-sans-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
+    /* work-sans-regular - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/work-sans-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 
-        /* work-sans-600 - latin */
-        @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Work Sans';
-        font-style: normal;
-        font-weight: 600;
-        src: url('.assets/fonts/work-sans-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
+    /* work-sans-600 - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/work-sans-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 
-        /* work-sans-700 - latin */
-        @font-face {
-        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Work Sans';
-        font-style: normal;
-        font-weight: 700;
-        src: url('.assets/fonts/work-sans-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-        }
+    /* work-sans-700 - latin */
+    @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/work-sans-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
 }
 
@@ -33,7 +31,8 @@
     :root {
     /* Color Palette */
     --clr-white: hsl(0, 100%, 100%);
-    --clr-grey100: hsl(0, 0%, 98%);
+    --clr-grey100: hsl(0, 0%, 90%);
+    --clr-grey600: hsl(0, 0%, 60%);
     --clr-black: hsl(0, 0%, 0%);
     --clr-purple100: hsl(275, 100%, 97%);
     --clr-purple600: hsl(292, 16%, 49%);
@@ -42,50 +41,148 @@
     /* Layout colors */
     --layout-background: var(--clr-purple100);
     --layout-card-background: var(--clr-white);
-    --layout-card-shadow: rgba(0, 0, 0, 0.1);
+    --layout-card-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
     --layout-card-anchor: var(--clr-white);
     --layout-h1-star-icon: var(--clr-purple);
     --layout-card-anchor-icon: var(--clr-purple);
     --layout-card-anchor-icon-active: var(--clr-black);
+    --layout-card-anchor-border: var(--clr-grey100);
     /* Font colors */
     --font-color-h1: var(--clr-black);
-    --font-color-p: var(--clr-grey100);
+    --font-color-p: var(--clr-grey600);
     --font-color-anchor: var(--clr-black);
     --font-color-anchor-hover: var(--clr-purple);
     }
 }
 
 @layer Layout {
-    :root {
+    *, *:before, *:after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-    }
-
-    body {
         font-family: 'Work Sans', sans-serif;
         font-size: 16px;
         line-height: 1.5;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: 100vw calc(250 / 16 * 1rem);
-        background-image: url(./assets/images/background-pattern-desktop.svg);
-        background-color: var(--layout-background);
-        margin: 0;
-        padding: 0;
+    }
+    html {
+        position: relative;
+    };
+
+    body {
+        position: absolute;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 35% 65%;
         width: 100vw;
         height: 100vh;
+        margin: 0;
+    }
+
+    .bg-image {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        background-size: 100vw auto;
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        margin: 0;
+    }
+
+    .bg-color {
+        width: 100%;
+        height: 100%;
+        background-color: var(--layout-background);
+        z-index: 0;
+        margin: 0;
     }
 
     main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+    }
+
+    .card {
+        background-color: var(--layout-card-background);
+        box-shadow: var(--layout-card-shadow);
+        border-radius: 8px;
+        min-width: 600px;
+        padding: 2.5rem;
+    }
+
+    h1 {
+        color: var(--font-color-h1);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    span {
+        color: var(--layout-h1-star-icon);
+        font-size: 2.5rem;
+    }
+
+    p {
+        color: var(--font-color-p);
+        font-size: 0.8rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .accordion-item {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--layout-card-anchor-border);
+        padding-bottom: 1rem;
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--layout-card-anchor-icon);
+        transition: fill 0.3s ease;
+    }
+
+    .minus {
+        display: none;
+        fill: var(--clr-black);
+    }
+
+    .accordion-body {
+        display: none;
     }
 
     footer {
+        position: absolute;
+        bottom: 0;
+        left: 40%;
         font-size: 11px; 
         text-align: center;
+        background-color: var(--layout-background);
         > a { 
             color: hsl(228, 45%, 44%); 
         }
