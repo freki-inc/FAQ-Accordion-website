@@ -159,6 +159,10 @@
         cursor: pointer;
     }
 
+    .accordion-body {
+        display: none;
+    }
+
     svg {
         width: 1.5rem;
         height: calc(32 / 16 * 1rem); /* 32px */
@@ -173,10 +177,6 @@
     .minus {
         display: none;
         fill: var(--clr-black);
-    }
-
-    .accordion-body {
-        display: none;
     }
 
     footer {

@@ -3,6 +3,11 @@ const accordionItem2 = document.getElementById('accordion-item-2');
 const accordionItem3 = document.getElementById('accordion-item-3');
 const accordionItem4 = document.getElementById('accordion-item-4');
 
+const accordionBody1 = document.getElementById('accordion-body-1');
+const accordionBody2 = document.getElementById('accordion-body-2');
+const accordionBody3 = document.getElementById('accordion-body-3');
+const accordionBody4 = document.getElementById('accordion-body-4');
+
 const plus1 = document.getElementById('plus-1');
 const plus2 = document.getElementById('plus-2');
 const plus3 = document.getElementById('plus-3');
@@ -12,11 +17,6 @@ const minus1 = document.getElementById('minus-1');
 const minus2 = document.getElementById('minus-2');
 const minus3 = document.getElementById('minus-3');
 const minus4 = document.getElementById('minus-4');
-
-const accordionBody1 = document.getElementById('accordion-body-1');
-const accordionBody2 = document.getElementById('accordion-body-2');
-const accordionBody3 = document.getElementById('accordion-body-3');
-const accordionBody4 = document.getElementById('accordion-body-4');
 
 accordionItem1.addEventListener('click', () => {
     if (accordionBody1.style.display === "block") {
