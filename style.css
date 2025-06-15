@@ -37,15 +37,11 @@
     --clr-purple100: hsl(275, 100%, 97%);
     --clr-purple600: hsl(292, 16%, 49%);
     --clr-purple950: hsl(292, 42%, 14%);
-    --clr-purple: hsl(292, 100%, 50%);
+    --clr-purple: hsl(292, 100%, 36%);
     /* Layout colors */
     --layout-background: var(--clr-purple100);
     --layout-card-background: var(--clr-white);
     --layout-card-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
-    --layout-card-anchor: var(--clr-white);
-    --layout-h1-star-icon: var(--clr-purple);
-    --layout-card-anchor-icon: var(--clr-purple);
-    --layout-card-anchor-icon-active: var(--clr-black);
     --layout-card-anchor-border: var(--clr-grey100);
     /* Font colors */
     --font-color-h1: var(--clr-black);
