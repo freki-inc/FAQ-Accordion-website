@@ -61,11 +61,9 @@
         line-height: 1.5;
         text-decoration: none;
     }
-    html {
-        position: relative;
-    };
 
     body {
+        position: relative;
         display: grid;
         grid-template-rows: 35vh 64vh 1vh;
         width: 100vw;
