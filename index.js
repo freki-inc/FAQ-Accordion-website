@@ -18,51 +18,54 @@ const accordionBody2 = document.getElementById('accordion-body-2');
 const accordionBody3 = document.getElementById('accordion-body-3');
 const accordionBody4 = document.getElementById('accordion-body-4');
 
-
 accordionItem1.addEventListener('click', () => {
-    if (accordionBody1.style.display === 'none') {
-    accordionBody1.style.display = 'block';
-    plus1.style.display = 'none';
-    minus1.style.display = 'block';
-  } else {
-    accordionBody1.style.display = 'none';
-    plus1.style.display = 'block';
-    minus1.style.display = 'none';
-  }
+    if (accordionBody1.style.display === "block") {
+      accordionBody1.style.display = 'none';
+      plus1.style.display = 'block';
+      minus1.style.display = 'none';
+    }
+    else {
+      accordionBody1.style.display = 'block';
+      plus1.style.display = 'none';
+      minus1.style.display = 'block';
+    }
 })
 
 accordionItem2.addEventListener('click', () => {
-    if (accordionBody2.style.display === 'none') {
-    accordionBody2.style.display = 'block';
-    plus2.style.display = 'none';
-    minus2.style.display = 'block';
-  } else {
-    accordionBody2.style.display = 'none';
-    plus2.style.display = 'block';
-    minus2.style.display = 'none';
-  }
+    if (accordionBody2.style.display === "block") {
+      accordionBody2.style.display = 'none';
+      plus2.style.display = 'block';
+      minus2.style.display = 'none';
+    }
+    else {
+      accordionBody2.style.display = 'block';
+      plus2.style.display = 'none';
+      minus2.style.display = 'block';
+    }
 })
 
 accordionItem3.addEventListener('click', () => {
-    if (accordionBody3.style.display === 'none') {
-    accordionBody3.style.display = 'block';
-    plus3.style.display = 'none';
-    minus3.style.display = 'block';
-  } else {
-    accordionBody3.style.display = 'none';
-    plus3.style.display = 'block';
-    minus3.style.display = 'none';
-  }
+    if (accordionBody3.style.display === "block") {
+      accordionBody3.style.display = 'none';
+      plus3.style.display = 'block';
+      minus3.style.display = 'none';
+    }
+    else {
+      accordionBody3.style.display = 'block';
+      plus3.style.display = 'none';
+      minus3.style.display = 'block';
+    }
 })
 
 accordionItem4.addEventListener('click', () => {
-    if (accordionBody4.style.display === 'none') {
-    accordionBody4.style.display = 'block';
-    plus4.style.display = 'none';
-    minus4.style.display = 'block';
-  } else {
-    accordionBody4.style.display = 'none';
-    plus4.style.display = 'block';
-    minus4.style.display = 'none';
-  }
+    if (accordionBody4.style.display === "block") {
+      accordionBody4.style.display = 'none';
+      plus4.style.display = 'block';
+      minus4.style.display = 'none';
+    }
+    else {
+      accordionBody4.style.display = 'block';
+      plus4.style.display = 'none';
+      minus4.style.display = 'block';
+    }
 })
