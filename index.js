@@ -28,6 +28,15 @@ accordionItem1.addEventListener('click', () => {
       accordionBody1.style.display = 'block';
       plus1.style.display = 'none';
       minus1.style.display = 'block';
+      accordionBody2.style.display = 'none';
+      plus2.style.display = 'block';
+      minus2.style.display = 'none';
+      accordionBody3.style.display = 'none';
+      plus3.style.display = 'block';
+      minus3.style.display = 'none';
+      accordionBody4.style.display = 'none';
+      plus4.style.display = 'block';
+      minus4.style.display = 'none';
     }
 })
 
@@ -41,6 +50,15 @@ accordionItem2.addEventListener('click', () => {
       accordionBody2.style.display = 'block';
       plus2.style.display = 'none';
       minus2.style.display = 'block';
+      accordionBody1.style.display = 'none';
+      plus1.style.display = 'block';
+      minus1.style.display = 'none';
+      accordionBody3.style.display = 'none';
+      plus3.style.display = 'block';
+      minus3.style.display = 'none';
+      accordionBody4.style.display = 'none';
+      plus4.style.display = 'block';
+      minus4.style.display = 'none';
     }
 })
 
@@ -54,6 +72,15 @@ accordionItem3.addEventListener('click', () => {
       accordionBody3.style.display = 'block';
       plus3.style.display = 'none';
       minus3.style.display = 'block';
+      accordionBody1.style.display = 'none';
+      plus1.style.display = 'block';
+      minus1.style.display = 'none';
+      accordionBody2.style.display = 'none';
+      plus2.style.display = 'block';
+      minus2.style.display = 'none';
+      accordionBody4.style.display = 'none';
+      plus4.style.display = 'block';
+      minus4.style.display = 'none';
     }
 })
 
@@ -67,5 +94,14 @@ accordionItem4.addEventListener('click', () => {
       accordionBody4.style.display = 'block';
       plus4.style.display = 'none';
       minus4.style.display = 'block';
+      accordionBody1.style.display = 'none';
+      plus1.style.display = 'block';
+      minus1.style.display = 'none';
+      accordionBody2.style.display = 'none';
+      plus2.style.display = 'block';
+      minus2.style.display = 'none';
+      accordionBody3.style.display = 'none';
+      plus3.style.display = 'block';
+      minus3.style.display = 'none';
     }
 })
