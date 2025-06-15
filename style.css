@@ -157,19 +157,15 @@
         margin-right: 1.2rem;
 
         @media (width <= 828px) {
-           width: 1.2rem;
-           height: 1.2rem;
-           margin-right: 0.8rem;
-        }
-
-        @media (width <= 450px) {
-           margin-right: 0.5rem;
+           width: 1.5rem;
+           height: 1.5rem;
+           margin-right: 1.4rem;
         }
     }
 
     p {
         color: var(--font-color-p);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         padding-top: 0.8rem;
 
         @media (width <= 828px) {
@@ -183,13 +179,14 @@
         line-height: 2rem;
 
         @media (width <= 828px) {
-           font-size: 1rem;
-           padding-right: 2rem;
+           font-size: 0.95rem;
+           padding-right: 2.5rem;
+           line-height: 1.5rem;
         }
 
         @media (width <= 450px) {
-           font-size: 0.9rem;
-           padding-right: 1.4rem;
+           font-size: 0.95rem;
+           padding-right: 2rem;
            line-height: 1.2rem;
         }
     }
